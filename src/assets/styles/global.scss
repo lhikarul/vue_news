@@ -1,0 +1,23 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+ul,li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    line-height: 27px;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    color: #797979;
+}
+
+// @import './reset.scss';
