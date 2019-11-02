@@ -1,0 +1,30 @@
+.area-heading {
+    text-align: center;
+    margin-bottom: 45px;
+
+    &-title {
+        margin-bottom: 23px;
+        position: relative;
+        color: $dip;
+        font-size: 36px;
+        font-weight: 600;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -15px;
+            width: 70px;
+            height: 2px;
+            transform: translateX(-50%);
+            background: $baseColor;
+        }
+    }
+
+    &-subtitle {
+        color: $dip2;
+    }
+}
+
+.area-padding {
+    padding: 130px 0;
+}

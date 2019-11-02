@@ -58,3 +58,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
     display: flex;
     justify-content: space-between;
 }
+
+@mixin flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

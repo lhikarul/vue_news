@@ -49,6 +49,51 @@
                 
             </div>
         </div>
+
+        <div class="second-block">
+            <div class="block">
+                <div>
+                    <div class="img-wrapper">
+                        <img src="../assets/image/magazine/5.jpg">
+                    </div>
+                    <div class="short-details">
+                        <h3 class="short-details-categories">tours & travel</h3>
+                        <div class="short-details-title">Brought all day dominion appear from subdue dominion firmament over face</div>
+                        <div class="short-details-extra-info"><span>march 12, 2019.</span><span>by allen mark</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div>
+                    <div class="img-wrapper">
+                        <img src="../assets/image/magazine/6.jpg">
+                    </div>
+                    <div class="short-details">
+                        <h3 class="short-details-categories">tours & travel</h3>
+                        <div class="short-details-title">abundantly forth late appear fourth us.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div>
+                    <div class="img-wrapper">
+                        <img src="../assets/image/magazine/7.jpg">
+                    </div>
+                    <div class="short-details">
+                        <h3 class="short-details-categories">tours & travel</h3>
+                        <div class="short-details-title">abundantly forth late appear fourth us.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="third-block area-padding">
+            <div class="area-heading">
+                <h3 class="area-heading-title">Eidtor Picks</h3>
+                <p class="area-heading-subtitle">Abundantly creeping saw forth spirit can made appear fourth us.</p>
+                
+            </div>
+        </div>
     </div>
 </template>
 
@@ -187,6 +232,95 @@
 
             .wrapper:first-child {
                 margin-bottom: 30px;
+            }
+        }
+    }
+
+    .second-block {
+        @include respond() {
+            padding: 0;
+        };
+        @include flex-between;
+
+        .block {
+            padding: 0 15px;
+            .img-wrapper {
+                height: 100%;
+                overflow: hidden;
+                img {
+                    @include transition;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .block:first-child {
+            @include flex-item-width(0,0,50%);
+
+            > div {
+                @include flex-between;
+                border: 10px solid $baseColor;
+                box-sizing: border-box;
+                height: 100%;
+            }
+
+            .img-wrapper {
+                @include flex-item-width(0,0,41.66667%);
+            }
+
+            .short-details {
+                padding: 25px;
+                @include flex-item-width(0,0,58.333333%);
+
+                &-categories,&-extra-info {
+                     text-transform: capitalize;
+                }
+
+                &-title {
+                    margin-bottom: 10px;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 36px;
+                    @include transition;
+                }
+            }
+        }
+
+        .block:not(:first-child) {
+             @include flex-item-width(0,0,25%);
+            
+            > div {
+                border: 6px solid #b9be7e;
+                box-sizing: border-box;
+                height: 100%;
+            }
+
+            position: relative;
+            .short-details {
+                padding: 0 18px;
+                position: absolute;
+                bottom: 0;
+                color: $white;
+
+                &-categories {
+                    font-size: 11px;
+                    text-transform: uppercase;
+                }
+
+                &-title {
+                    margin-bottom: 10px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 36px;
+                    text-transform: capitalize;
+                }
             }
         }
     }
