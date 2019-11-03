@@ -1,0 +1,123 @@
+@import '../mixins.scss';
+
+.single-blog {
+    position: relative;
+
+    &:hover {
+        .img-wrapper {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .reverse-order {
+        order: -1;
+    }
+
+    .img-wrapper,.video-img-wrapper {
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            @include transition;
+        }
+    }
+
+    .short-details {
+        box-sizing: border-box;
+        padding: 25px;
+        background: $white;
+
+        &-categories {
+            margin-top: 0px;
+            color: $baseColor;
+            font-size: 11px;
+            font-weight: 600;
+            font-family: "Open Sans", sans-serif;
+            text-transform: uppercase;
+        }
+
+        &-title {
+            margin-bottom: 10px;
+            cursor: pointer;
+            color: $dip;
+            font-size: 27px;
+            font-weight: 600;
+            line-height: 36px;
+            text-transform: capitalize;
+                                   
+            @include transition;
+
+            &:hover {
+                color: $baseColor;
+            }
+        }
+
+        &-extra-info {
+            font-size: 13px;
+            text-transform: uppercase;
+
+            span:first-child {
+               color: $pfont;
+               cursor: pointer;
+               @include transition;
+
+               &:hover {
+                   color: $baseColor;
+               }
+            }
+            span:last-child {
+                color: $dip2;
+                font-weight: 600;
+            }
+
+            .icons {
+                
+                i {
+                    padding-right: 5px;
+                }
+
+                span {
+                    color: $pfont;
+                    @include transition;
+                    &:not(:last-child) {
+                        margin-right: 12px;
+                    }
+                }
+                span:hover {
+                    color: $baseColor;
+                }
+            }
+        }
+
+        &-padding-left-0 {
+            padding-left: 0;
+        }
+
+        &-padding-right-0 {
+            padding-right: 0;
+        }
+
+        &-video {
+            padding: 10px;
+            padding-left: 20px;
+        }
+
+        &.position-right-bottom {
+            padding: 40px;
+            width: 80%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        &.position-relative-center-bottom {
+            margin-top: -54px;
+            padding: 40px;
+            width: 94%;
+            position: relative;
+            right: -3%;
+        }
+    }
+}
