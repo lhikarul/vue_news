@@ -3,7 +3,7 @@
             <div class="container">
                 <div class="breadcrumb-wrapper">
                          <div class="breadcrumb-title">
-                            <h2>category</h2>
+                            <h2>{{currentPageName}}</h2>
                         </div>
                         <div class="nav-wrapper">
                             <router-link to="/" class="nav-link">home</router-link>/
