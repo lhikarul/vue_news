@@ -18,7 +18,14 @@
             </div>
         </div>
         <nav class="nav-wrapper">
-            <li v-for="(item,index) in navList" :key='index'><a href="javascript:;" class="nav-text" :class="{active: item === 'Home'}">{{item}}</a></li>
+            <!-- <li v-for="(item,index) in navList" :key='index'><a href="javascript:;" class="nav-text" :class="{active: item === 'Home'}">{{item}}</a></li> -->
+            <!-- <router-link tag="li" to="/" v-for="(item,index) in navList" :key='index' class="nav-text" >{{item}}</router-link> -->
+            <router-link tag="li" class="nav-text" to="/">Home</router-link>
+            <router-link tag="li" class="nav-text" to="/categories">Categories</router-link>
+            <router-link tag="li" class="nav-text" to="/archive">Archive</router-link>
+           <li><a href="javascript:;" class="nav-text">Blog</a></li>
+            <router-link tag="li" class="nav-text" to="/news">Latest News</router-link>
+            <router-link tag="li" class="nav-text" to="/contact">Contact Us</router-link>
         </nav>
     </header>
 </template>
@@ -116,7 +123,7 @@
                 color: $dip;
                 font-size: 15px;
 
-                &.active,&:hover {
+                &.router-link-exact-active,&:hover {
                     color: $baseColor;
                     @include transition;
                 }

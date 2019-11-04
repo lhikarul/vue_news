@@ -41,9 +41,9 @@
                     </div>
 
                 </div>
-               <div class="footer-bottom">
-                   <p>Copyright ©2019 All rights reserved | This template is made with <i class="fa fa-heart"></i> by<em class="copyright"> Colorlib</em></p>
-                   <div class="social-icons">
+               <div class="footer-bottom no-gutters">
+                   <p class="col-md-12 col-lg-8">Copyright ©2019 All rights reserved | This template is made with <i class="fa fa-heart"></i> by<em class="copyright"> Colorlib</em></p>
+                   <div class="social-icons col-md-12 col-lg-4">
                        <a href="javascript:;"><i class="ti-facebook"></i></a>
                        <a href="javascript:;"><i class="ti-twitter"></i></a>
                        <a href="javascript:;"><i class="ti-dribbble"></i></a>
@@ -130,6 +130,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
 
             .copyright {
                 color: $baseColor;
@@ -137,12 +138,19 @@
             }
 
             .social-icons {
+                text-align: right;
                 a {
                     display: inline-block;
                     width: 32px;
                     color: #8f919c;
                     text-align: center;
                 }
+            }
+        }
+
+        @media (max-width: 991px) {
+            .footer-bottom, .footer-bottom .social-icons {
+                text-align: center;
             }
         }
     }

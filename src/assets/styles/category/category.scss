@@ -1,0 +1,70 @@
+@import '../mixins.scss';
+@import '../placeholder.scss';
+
+.single-category {
+    margin-bottom: 20px;
+    position: relative;
+    .short-details {
+        @include short-details(30px,relative,-3%,0,94%) {
+            margin-top: -92px;
+        }
+
+        &-categories {
+            margin-bottom: 6px;
+            color: $baseColor;
+            text-transform: uppercase;
+        }
+
+
+        &-title {
+            margin-bottom: 8px;
+            color: $dip;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        &-extra-info {
+            .icons > span {
+                margin-right: 12px;
+            }
+            
+            .icons i {
+                padding-right: 5px;
+            }
+        }
+
+        &-title, .icons span {
+            @extend %transition;
+        }
+
+        &-title:hover, .icons span:hover {
+            color: $baseColor;
+        }
+    }
+}
+
+.img-wrapper {
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.load-btn {
+    margin-top: 15px;
+    border: 1px solid $baseColor;
+    padding: 0 18px;
+    display: inline-block;
+    background: $baseColor;
+    color: $white;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 48px;
+    @extend %transition;
+
+    &:hover {
+        background: $white;
+        color: $baseColor;
+    }
+}

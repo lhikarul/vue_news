@@ -74,11 +74,6 @@
             line-height: 36px;
             text-transform: capitalize;
             font-family: $headingFont;
-
-            &-small {
-                font-size: 16px;
-                line-height: 4px;
-            }
                                    
             @include transition;
 
@@ -104,20 +99,6 @@
                 color: $dip2;
                 font-weight: 600;
             }
-
-            // span:first-child {
-            //    color: $pfont;
-            //    cursor: pointer;
-            //    @include transition;
-
-            //    &:hover {
-            //        color: $baseColor;
-            //    }
-            // }
-            // span:last-child {
-            //     color: $dip2;
-            //     font-weight: 600;
-            // }
 
             .icons {
                 

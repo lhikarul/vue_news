@@ -64,3 +64,13 @@ ORDER: Base + typography > general layout + grid > page layout > components
     justify-content: space-between;
     align-items: center;
 }
+
+@mixin short-details($pd,$pos,$right,$bottom,$w,$bg:#fff) {
+    padding: $pd;
+    position: $pos;
+    right: $right;
+    bottom: $bottom;
+    width: $w;
+    background: $bg;
+    @content;
+}
