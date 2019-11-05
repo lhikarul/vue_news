@@ -21,7 +21,6 @@
             <router-link tag="li" class="nav-text" to="/">Home</router-link>
             <router-link tag="li" class="nav-text" to="/categories">Categories</router-link>
             <router-link tag="li" class="nav-text" to="/archive">Archive</router-link>
-           <!-- <li><a href="javascript:;" class="nav-text">Blog</a></li> -->
            <li class="nav-text">Blog</li>
             <router-link tag="li" class="nav-text" to="/news">Latest News</router-link>
             <router-link tag="li" class="nav-text" to="/contact">Contact Us</router-link>
